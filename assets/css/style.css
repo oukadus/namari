@@ -1,0 +1,141 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+
+:root {
+  --namari-spacer: 2rem;
+  --namari-font: "Open Sans", sans-serif, Arial, Helvetica;
+  --namari-black: #111;
+  --namari-gold: #d4b866;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  cursor: pointer;
+}
+
+html {
+  background-color: #cccccc;
+}
+
+body {
+  font-family: var(--namari-font);
+}
+
+/* ////////////////////////////////////////////////////
+                HEADER | NAV
+/////////////////////////////////////////////////*/
+
+nav {
+  padding-top: 2rem !important;
+}
+
+.nav-link {
+  text-transform: uppercase;
+  font-size: 13px;
+}
+
+.nav-link:hover {
+  font-weight: 600;
+}
+
+.socials .nav-link:hover {
+  color: var(--namari-gold);
+  transform: scale(150%);
+  transition: 600ms ease-in;
+}
+
+.navbar-brand img {
+  height: 22px !important;
+}
+
+nav ul.pages {
+  flex-basis: 100%;
+  justify-content: center;
+}
+
+/* ////////////////////////////////////////////////////
+                HEADER | HEROSHOT
+/////////////////////////////////////////////////*/
+
+header {
+  min-height: 100vh;
+  background: url("../images/banner-images/banner-image-1.jpg") no-repeat fixed;
+  background-position: top -2rem right 50%;
+  background-size: 100%;
+  background-origin: border-box;
+}
+
+#heroshot .heroContent {
+  margin-top: 10rem;
+}
+
+#heroshot h1 {
+  font-weight: 900;
+  font-size: 3.5rem;
+}
+
+#heroshot .heroContent {
+  position: relative;
+  /* width: 40%; */
+}
+
+#heroshot .heroContent::before {
+  content: "";
+  height: 5px;
+  width: 30px;
+  background-color: var(--namari-gold);
+  position: absolute;
+  top: -30px;
+  left: 0;
+}
+
+#heroshot h2 {
+  font-weight: lighter;
+  font-size: 1.1rem;
+  font-family: var(--namari-font);
+  margin: 2rem 0 4rem 0;
+  color: var(--namari-black);
+  position: relative;
+}
+
+#heroshot h2::after {
+  content: "";
+  height: 5px;
+  width: 30px;
+  background-color: var(--namari-gold);
+  position: absolute;
+  bottom: -30px;
+  left: 0;
+}
+
+.btn {
+  padding: 0.5rem 2rem;
+  border-radius: 0;
+}
+
+.btn-primary {
+  background-color: transparent;
+  border: 4px solid var(--namari-black);
+  color: var(--namari-black);
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.btn-primary:hover {
+  border-color: var(--namari-gold);
+  color: var(--namari-gold);
+  background-color: transparent;
+}
+
+/* ////////////////////////////////////////////////////
+                SECTION | SERVICES
+/////////////////////////////////////////////////*/
+
+#services {
+  background-color: white;
+  min-height: 40vh;
+}

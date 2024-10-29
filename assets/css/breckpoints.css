@@ -1,0 +1,13 @@
+/* // `sm` applies to x-small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+  header {
+    background-position: top -10rem right -10rem;
+  }
+}
+
+/* // `md` applies to small devices (landscape phones, less than 768px) */
+@media (max-width: 767.98px) {
+  header {
+    background-position: bottom center;
+  }
+}
