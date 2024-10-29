@@ -1,3 +1,7 @@
+/* /////////////////////////////////////////////////
+                MISC
+/////////////////////////////////////////////////*/
+
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
 
 :root {
@@ -5,6 +9,8 @@
   --namari-font: "Open Sans", sans-serif, Arial, Helvetica;
   --namari-black: #111;
   --namari-gold: #d4b866;
+  --namari-gray: #c9c9c9;
+  --namari-grayText: #a8a6a2;
 }
 
 * {
@@ -23,6 +29,12 @@ html {
 
 body {
   font-family: var(--namari-font);
+  margin: 1rem;
+  height: auto;
+}
+
+main {
+  background-color: #fefefe !important;
 }
 
 /* ////////////////////////////////////////////////////
@@ -40,6 +52,14 @@ nav {
 
 .nav-link:hover {
   font-weight: 600;
+}
+
+.socials .nav-link {
+  padding: 0 0.8rem !important;
+}
+
+.socials .nav-link {
+  font-size: 1rem;
 }
 
 .socials .nav-link:hover {
@@ -102,7 +122,8 @@ header {
   position: relative;
 }
 
-#heroshot h2::after {
+#heroshot h2::after,
+#services h2::after {
   content: "";
   height: 5px;
   width: 30px;
@@ -136,6 +157,81 @@ header {
 /////////////////////////////////////////////////*/
 
 #services {
-  background-color: white;
   min-height: 40vh;
+  padding: var(--namari-spacer) 0;
+}
+
+#services h3 {
+  text-transform: uppercase;
+  color: var(--namari-gray);
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+#services h2 {
+  font-weight: 900;
+  font-size: 1.8rem;
+  margin-bottom: 4rem;
+  position: relative;
+}
+
+#services p {
+  font-weight: lighter;
+  color: var(--namari-grayText);
+}
+
+/* CARDS */
+
+#services .card {
+  border: none !important;
+  border-radius: 0;
+}
+
+.card-icon {
+  font-size: 1.5rem;
+  color: var(--namari-gold);
+}
+
+.card-title {
+  margin-top: 1rem;
+  font-weight: 800;
+}
+
+article:first-child .card-title {
+  text-transform: uppercase;
+}
+
+/* ////////////////////////////////////////////////////
+              SECTION | SERVICES | GALLERY
+/////////////////////////////////////////////////*/
+
+#gallery ul li {
+  list-style-type: none;
+  width: calc(100% / 3) !important;
+  position: relative;
+}
+
+#gallery ul li img {
+  width: 100%;
+}
+
+#gallery ul li .overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  color: var(--namari-gold);
+  z-index: 1;
+  background-color: rgba(255, 255, 255, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  visibility: hidden;
+  transition: 5s;
+}
+
+#gallery ul li:hover .overlay {
+  visibility: visible;
 }
