@@ -123,7 +123,8 @@ header {
 }
 
 #heroshot h2::after,
-#services h2::after {
+#services h2::after,
+#beliving h2::after {
   content: "";
   height: 5px;
   width: 30px;
@@ -152,16 +153,8 @@ header {
   background-color: transparent;
 }
 
-/* ////////////////////////////////////////////////////
-                SECTION | SERVICES
-/////////////////////////////////////////////////*/
-
-#services {
-  min-height: 40vh;
-  padding: var(--namari-spacer) 0;
-}
-
-#services h3 {
+#services h3,
+#beliving h3 {
   text-transform: uppercase;
   color: var(--namari-gray);
   font-size: 1rem;
@@ -169,16 +162,26 @@ header {
   margin-bottom: 1rem;
 }
 
-#services h2 {
+#services h2,
+#beliving h2 {
   font-weight: 900;
   font-size: 1.8rem;
   margin-bottom: 4rem;
   position: relative;
 }
 
-#services p {
+.lighter {
   font-weight: lighter;
   color: var(--namari-grayText);
+}
+
+/* ////////////////////////////////////////////////////
+                SECTION | SERVICES
+/////////////////////////////////////////////////*/
+
+#services {
+  min-height: 40vh;
+  padding: var(--namari-spacer) 0;
 }
 
 /* CARDS */
@@ -222,16 +225,27 @@ article:first-child .card-title {
   height: 100%;
   top: 0;
   left: 0;
-  color: var(--namari-gold);
   z-index: 1;
   background-color: rgba(255, 255, 255, 0.6);
   display: flex;
   align-items: center;
   justify-content: center;
-  visibility: hidden;
-  transition: 5s;
+  opacity: 0;
+  transition: opacity 0.6s ease-in-out;
+
+  a {
+    color: var(--namari-gold);
+  }
 }
 
 #gallery ul li:hover .overlay {
-  visibility: visible;
+  opacity: 1;
+}
+
+/* ////////////////////////////////////////////////////
+              SECTION | BELIVING
+/////////////////////////////////////////////////*/
+
+#beliving blockquote {
+  font-weight: 300;
 }
